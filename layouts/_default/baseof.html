@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
+    {{ if .Params.css }}
+    <link rel="stylesheet" href="{{ .Params.css }}">
+    {{ end }}
     <body data-theme = "{{ .Site.Params.defaultColor }}" class="notransition">
         {{- partial "scriptsBodyStart.html" . -}}
         {{- partial "header.html" . -}}
